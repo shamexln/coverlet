@@ -32,7 +32,7 @@ steps:
   displayName: xUnitTest
   inputs:
       command: test
-      projects: '**/test/*.UnitTests/*.csproj'
+      projects: '**/*.csproj'
       arguments: '--configuration $(buildConfiguration) --logger trx /p:CollectCoverage=true  /p:CoverletOutput=../CoverageResults/ /p:MergeWith="../CoverageResults/coverage.json" /p:CoverletOutputFormat=\"opencover,json\" -m:1'
       nobuild: true
       publishTestResults: false
